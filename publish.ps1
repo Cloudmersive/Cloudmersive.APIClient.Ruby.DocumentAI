@@ -1,1 +1,1 @@
-& gem push .\client\cloudmersive-barcode-api-client-2.2.0.gem
+& gem push .\client\cloudmersive-documentai-api-client-2.2.0.gem
