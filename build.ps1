@@ -11,7 +11,7 @@ Invoke-WebRequest -Uri 'https://api.cloudmersive.com/document-ai/docs/v1/swagger
 #(Get-Content ./client/src/api/ConvertDocumentApi.js).replace('var returnType = Object;', "var returnType = 'Blob';") | Set-Content ./client/src/api/ConvertDocumentApi.js
 #(Get-Content ./client/src/api/ConvertWebApi.js).replace('var returnType = Object;', "var returnType = 'Blob';") | Set-Content ./client/src/api/ConvertWebApi.js
 
-(Get-Content ./client/cloudmersive-barcode-api-client.gemspec).replace('`find *`.split("\n").uniq.sort.select { |f| !f.empty? }', "Dir['./**/*']") | Set-Content ./client/cloudmersive-barcode-api-client.gemspec
+(Get-Content ./client/cloudmersive-documentai-api-client.gemspec).replace('`find *`.split("\n").uniq.sort.select { |f| !f.empty? }', "Dir['./**/*']") | Set-Content ./client/cloudmersive-documentai-api-client.gemspec
 #& npm build ./client
 
 
@@ -20,6 +20,6 @@ Invoke-WebRequest -Uri 'https://api.cloudmersive.com/document-ai/docs/v1/swagger
 Push-Location
 & cd ./client
 
-& gem build ./cloudmersive-barcode-api-client.gemspec
+& gem build ./cloudmersive-documentai-api-client.gemspec
 
 Pop-Location
