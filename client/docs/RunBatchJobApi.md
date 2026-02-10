@@ -1,6 +1,6 @@
 # CloudmersiveDocumentaiApiClient::RunBatchJobApi
 
-All URIs are relative to *https://localhost*
+All URIs are relative to *https://api.cloudmersive.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 Extract All Fields and Tables of Data from a Document using AI as a Batch Job
 
-Creates an async batch job for processing a large document as an AI batch job.  Extract all Fields and Tables, comprised of rows and columns of data, from a document using AI.  Input document formats supported include DOCX, PDF, PNG and JPG.
+Creates an async batch job for processing a large document as an AI batch job.  Extract all Fields and Tables, comprised of rows and columns of data, from a document using AI.  Input document formats supported include DOCX, PDF, PNG and JPG.  Requires Managed Instance or Private Cloud deployment.
 
 ### Example
 ```ruby
@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 
 Extract Classification or Category from a Document using AI as a Batch Job
 
-Creates an async batch job for processing a large document as an AI batch job.  Extract Classification or Category (e.g. Invoice, Receipt, Tax Form, or Form 1040, Form 1040 EZ, etc.) from a document using AI.  Input document formats supported include DOCX, PDF, PNG and JPG.
+Creates an async batch job for processing a large document as an AI batch job.  Extract Classification or Category (e.g. Invoice, Receipt, Tax Form, or Form 1040, Form 1040 EZ, etc.) from a document using AI.  Input document formats supported include DOCX, PDF, PNG and JPG.  Requires Managed Instance or Private Cloud deployment.
 
 ### Example
 ```ruby
@@ -132,7 +132,7 @@ Name | Type | Description  | Notes
 
 Extract Field Values from a Document using Advanced AI as a Batch Job
 
-Creates an async batch job for processing a large document as an AI batch job.  Extract Field Values (e.g. Invoice Number, Invoice Date, Business Card Phone Number, etc.) from a document using Advanced AI.  Input document formats supported include DOCX, PDF, PNG and JPG.
+Creates an async batch job for processing a large document as an AI batch job.  Extract Field Values (e.g. Invoice Number, Invoice Date, Business Card Phone Number, etc.) from a document using Advanced AI.  Input document formats supported include DOCX, PDF, PNG and JPG.  Requires Managed Instance or Private Cloud deployment.
 
 ### Example
 ```ruby
@@ -150,7 +150,7 @@ api_instance = CloudmersiveDocumentaiApiClient::RunBatchJobApi.new
 
 opts = { 
   recognition_mode: 'recognition_mode_example', # String | Optional; Recognition mode - Advanced (default) provides the highest accuracy but slower speed, while Normal provides faster response but lower accuracy for low quality images
-  body: CloudmersiveDocumentaiApiClient::AdvancedExtractFieldsRequest.new # AdvancedExtractFieldsRequest | 
+  body: CloudmersiveDocumentaiApiClient::AdvancedExtractFieldsRequest.new # AdvancedExtractFieldsRequest | Input document and parameters
 }
 
 begin
@@ -167,7 +167,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **recognition_mode** | **String**| Optional; Recognition mode - Advanced (default) provides the highest accuracy but slower speed, while Normal provides faster response but lower accuracy for low quality images | [optional] 
- **body** | [**AdvancedExtractFieldsRequest**](AdvancedExtractFieldsRequest.md)|  | [optional] 
+ **body** | [**AdvancedExtractFieldsRequest**](AdvancedExtractFieldsRequest.md)| Input document and parameters | [optional] 
 
 ### Return type
 
@@ -189,7 +189,7 @@ Name | Type | Description  | Notes
 
 Extract Text from a Document using AI as a Batch Job
 
-Creates an async batch job for processing a large document as an AI batch job.  Input document formats supported include DOCX, PDF, PNG and JPG.  Supports a wide range of languages.
+Creates an async batch job for processing a large document as an AI batch job.  Input document formats supported include DOCX, PDF, PNG and JPG.  Supports a wide range of languages.  Requires Managed Instance or Private Cloud deployment.
 
 ### Example
 ```ruby
@@ -263,7 +263,7 @@ end
 api_instance = CloudmersiveDocumentaiApiClient::RunBatchJobApi.new
 
 opts = { 
-  async_job_id: 'async_job_id_example' # String | 
+  async_job_id: 'async_job_id_example' # String | Job ID for the batch job to get the status of
 }
 
 begin
@@ -279,7 +279,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **async_job_id** | **String**|  | [optional] 
+ **async_job_id** | **String**| Job ID for the batch job to get the status of | [optional] 
 
 ### Return type
 
